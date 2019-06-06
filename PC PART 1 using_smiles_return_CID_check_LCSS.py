@@ -57,36 +57,3 @@ for product, product_info in products.items():
                 file.write(product + " " + product_info["CID"] + " " + product_info["LCSS"] + "\n")
 file.close()    
 
-#print("File ready")
-
-
-#partTwoT = '/XML/?'
-#
-#for product, product_info in products.items():
-#
-#    xml_data = urllib.request.urlopen(partOne + product_info['CID'] + partTwoT)
-#    xml = BS.BeautifulSoup(xml_data, 'lxml')
-#    
-#    sections = []
-#    for section in xml.find_all('stringvalue'):
-#        sections.append(section)
-#    
-#    if len(sections) > 0:
-#        sections_xml = sections[-1].string
-#        
-#        soupy = BS.BeautifulSoup(sections_xml, 'lxml')
-#        
-#        try:
-#            products[product]['GHS'] = soupy.find('img').get('title')
-#            
-#        except:
-#            products[product]['GHS'] = 'NA'
-#
-#file = open("LabNetworkSearch_RESULTS.txt", "w")
-#for product, product_info in products.items():
-#    file.write(product + ":" + product_info["CID"] + ":" + product_info["LCSS"] + ":"+ product_info['GHS'] + "\n")
-#file.close()    
-#
-#print("File ready")
-
-
